@@ -54,7 +54,6 @@ public class dz {
             sum += v1;
             if (v1 > maxi) { maxi = v1; }
             else if (v1 < mini) { mini = v1;}
-            // else {midi = v1;}
         }
         midi = sum / ze;
         System.out.println("\n3.\n" + maxi + " - максимальное значение первого массива.");
@@ -72,6 +71,7 @@ public class dz {
                     cat.get(ni).add(i, " ");
                 }
             }
+            System.out.println("4. ");
             cat.get(0).add(0, "проза");
             cat.get(1).add(0, "поэзия");
             cat.get(2).add(0, "док");
