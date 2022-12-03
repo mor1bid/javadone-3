@@ -64,24 +64,30 @@ public class dz {
         // System.out.println(mini + " - минимальное значение первого массива.");
         // System.out.println(midi + " - среднее значение первого массива.");
         
+        int horco = 5;
         int verco = 4;
-        List<ArrayList<String>> cat = new ArrayList<>(verco);
-            for(int i = 0; i < verco; i++) {
-                int horco = 5;
-                cat.add(new ArrayList<String>(5));
-                System.out.println(cat.get(i).size());
+        List<ArrayList<String>> cat = new ArrayList<>(horco);
+            for(int i = 0; i <= horco; i++) {
+                cat.add(new ArrayList<String>(verco));
+            }
+            for(int i = 0; i <= horco; i++) {
+                for(int ni = 0; ni <= verco; ni++) {
+                    cat.get(ni).add(i, " ");
+                }
             }
             cat.get(0).add(0, "проза");
-            cat.get(2).add(1, "поэзия");
-            cat.get(1).add(2, "док");
-            for (int i = 0; i < verco; i++) {
+            cat.get(1).add(0, "поэзия");
+            cat.get(2).add(0, "док");
+            cat.get(0).add(1, "Война и мир");
+            cat.get(1).add(1, "Бородино");
+            cat.get(0).add(2, "12 стульев");
+            for (int i = 0; i < horco; i++) {
                 int edgco = cat.get(i).size();
                 for (int ni = 0; ni < edgco; ni++) {
-                    int startver = i;
                     String e = cat.get(i).get(ni);
-                    System.out.printf("%s ", e, "\t");
-                    // System.out.printf("Vertex %s is connected to vertex %s%n", startver, e);
+                    System.out.printf("%s\t", e);
                 }
+                System.out.println();
             }
     }
 
